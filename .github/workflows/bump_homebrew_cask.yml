@@ -1,0 +1,22 @@
+name: Bump Homebrew Cask — oculante
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  bump-homebrew-cask:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Bump Homebrew Cask
+      uses: eugenesvk/action-homebrew-bump-cask@3.8.3
+      with:
+        tap       	: eugenesvk/oculante	# [opt] |homebrew/core|
+        cask      	: oculante          	# [req] Cask name
+        token     	: ${{secrets.TOKEN}}	# [req] Custom GitHub access token with the 'public_repo'
+        # org     	: ORG               	# [opt] Create tap repo fork in organization
+        # tag     	: ${{github.ref}}   	# [opt] Determined automatically
+        # revision	: ${{github.sha}}   	# [opt] Determined automatically
+        # force   	: false             	# [opt] Don't check for already open PR
