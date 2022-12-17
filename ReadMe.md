@@ -10,7 +10,7 @@ whenever a new tag is pushed on the main app repo using a GitHub actions templat
 
 - Create a [custom GitHub access token (classic)](https://github.com/settings/tokens) with the `public_repo` scope
 - Add this token to your repo's ⚙`Settings` → ⧆`Secrets` → `Actions` → `Actions secrets` → `New repository secret` under the name of `TOKEN` (the repo is the one that will run this workflow, e.g., the one that has the main app that needs a cask 'github.com/YOUR_NAME/YOUR_APP_REPO/settings/secrets/actions')
-- Add [this bump_homebrew_cask.yml workflow][https://github.com/eugenesvk/homebrew-bump/blob/main/.github/workflows/bump_homebrew_cask.yml] from this repo to yours
+- Add [this bump_homebrew_cask.yml workflow](https://github.com/eugenesvk/homebrew-bump/blob/main/.github/workflows/bump_homebrew_cask.yml) from this repo to yours
 - Change it to reference your Homebrew cask tap
 ```yaml
         tap 	: your_name/tap_name	# [opt] |homebrew/core|
