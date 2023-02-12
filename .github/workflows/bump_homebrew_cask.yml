@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Bump Homebrew Cask
-      uses: eugenesvk/action-homebrew-bump-cask@3.8.3
+      uses: eugenesvk/action-homebrew-bump-cask@3.8.4
       with:
         tap       	: eugenesvk/oculante	# [opt] |homebrew/core|
         cask      	: oculante          	# [req] Cask name
