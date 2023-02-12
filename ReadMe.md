@@ -39,4 +39,4 @@ whenever a new tag is pushed on the main app repo using a GitHub actions templat
 
 ## Known issues
 
-- The original [action-homebrew-bump-cask](https://github.com/eugenesvk/action-homebrew-bump-cask/blob/master/action.yml) this workflow relies on monkey-patching the Homebrew repo to work with GitHub APIs, so might stop working if the patched code is changed
+To be discovered...
