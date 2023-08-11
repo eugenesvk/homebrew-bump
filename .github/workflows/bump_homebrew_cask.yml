@@ -1,6 +1,7 @@
 name: Bump Homebrew Cask — oculante
 
 on:
+  workflow_dispatch:                      # allow manual trigger
   push:
     tags:
       - '*'
