@@ -8,8 +8,8 @@ whenever a new tag is pushed on the main app repo using a GitHub actions templat
 
 ## Installation
 
-- Create a [custom GitHub access token (classic)](https://github.com/settings/tokens) with the `public_repo` scope
-- Add this token to your repo's ⚙`Settings` → ⧆`Secrets` → `Actions` → `Actions secrets` → `New repository secret` under the name of `TOKEN` (the repo is the one that will run this workflow, e.g., the one that has the main app that needs a cask 'github.com/YOUR_NAME/YOUR_APP_REPO/settings/secrets/actions')
+- Create a [custom GitHub access token (classic)](https://github.com/settings/tokens/new?scopes=public_repo,workflow) with the `public_repo` scope
+- Add this token to your repo's ⚙`Settings` → ⧆`Secrets and variables` → `Actions` → `Actions secrets and variables` → `New repository secret` under the name of `TOKEN` (the repo is the one that will run this workflow, e.g., the one that has the main app that needs a cask 'github.com/YOUR_NAME/YOUR_APP_REPO/settings/secrets/actions')
 - Add [this bump_homebrew_cask.yml workflow](https://github.com/eugenesvk/homebrew-bump/blob/main/.github/workflows/bump_homebrew_cask.yml) from this repo to yours
 - Change it to reference your Homebrew cask tap
 ```yaml
@@ -33,8 +33,8 @@ whenever a new tag is pushed on the main app repo using a GitHub actions templat
     - ✓ `Dismiss stale pull request approvals when new commits are pushed`
   - ✓`Require status checks to pass before merging`
     - Select at least one status check, e.g., `test-bot (ubuntu-22.04)`
-- Create another [custom GitHub access token (classic)](https://github.com/settings/tokens) with the `public_repo` scope
-- Add this token to your repo's ⚙`Settings` → ⧆`Secrets` → `Actions` → `Actions secrets` → `New repository secret` under the name of `GH_TOKEN`
+- Create another [custom GitHub access token (classic)](https://github.com/settings/tokens/new?scopes=public_repo,workflow) with the `public_repo` scope
+- Add this token to your repo's ⚙`Settings` → ⧆`Secrets and variables` → `Actions` → `Actions secrets and variables` → `New repository secret` under the name of `GH_TOKEN`
 - Add [automerge](https://github.com/reitermarkus/automerge) workflow to your repo, [for example](https://github.com/eugenesvk/homebrew-oculante/blob/main/.github/workflows/automerge.yml)
 
 ## Known issues
