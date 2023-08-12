@@ -1,0 +1,21 @@
+name: Bump Homebrew Cask — oculante (auto)
+
+on:
+  workflow_dispatch:                          # allow manual trigger
+  schedule:
+    - cron:  '0 23 * * *'                     # every 23h
+
+jobs:
+  update-tap-casks:
+    runs-on: macos-latest
+
+    steps:
+    - name: Update Homebrew Cask
+      uses: eugenesvk/action-homebrew-bump-cask@3.8.4
+      with:
+        tap         : eugenesvk/oculante      # [opt] |homebrew/core| Bump all outdated casks in this tap
+        cask        : oculante                # [opt] Bump only these casks if outdated
+        token       : ${{secrets.TOKEN}}      # [req] Custom GitHub access token with the 'public_repo'
+        livecheck   : true                    # [opt] Use `brew livecheck`
+        # force     : false                   # [opt] Don't check for already open PR
+        # org       : ORG                     # [opt] Create tap repo fork in organization
