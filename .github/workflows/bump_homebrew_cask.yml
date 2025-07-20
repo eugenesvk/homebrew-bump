@@ -8,11 +8,11 @@ on:
 
 jobs:
   bump-homebrew-cask:
-    runs-on: macos-12
+    runs-on: macos-latest
 
     steps:
     - name: Bump Homebrew Cask
-      uses: eugenesvk/action-homebrew-bump-cask@3.8.4
+      uses: eugenesvk/action-homebrew-bump-cask@c5357e045eb291820713d22f7d1a2a379b409ddd #3.8.5 git 25-07, commit to avoid security issues since tags can be changed
       with:
         tap       	: eugenesvk/oculante	# [opt] |homebrew/core|
         cask      	: oculante          	# [req] Cask name
